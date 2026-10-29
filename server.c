@@ -17,7 +17,7 @@ void comm(int connfd){
 		memset(msg, 0, sizeof(msg));
 		read(connfd,msg,sizeof(msg));
 		printf("%s", msg);
-		memset(msg,MAXSIZE);
+		memset(msg,0,MAXSIZE);
 		
 		for(int n=0; n <= MAXSIZE; n++){
 			msg[n] = getchar();
